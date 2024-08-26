@@ -183,6 +183,10 @@ def manual_coins():
             'name': ['CONE'],
             'other': ['BitCone']
         },
+        'G': {
+            'name': ['GRAVITY'],
+            'other': []
+        },
     }
 
 

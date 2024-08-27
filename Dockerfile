@@ -14,6 +14,11 @@ COPY /other_ops /app/other_ops
 # install dependencies
 RUN apt-get update && apt-get install -y python3-pip
 RUN apt-get install -y python3-dev libpq-dev
+
+# create python venv and install dependencies
+RUN apt-get install -y python3-venv
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
 RUN pip install psycopg psycopg2-binary asyncpg asyncpraw aiostream
 
 # setup chron

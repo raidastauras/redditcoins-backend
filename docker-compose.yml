@@ -1,17 +1,6 @@
 version: "3.8"
 
 services:
-  db:
-    image: postgres:latest
-    restart: unless-stopped
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    volumes:
-      - /var/lib/postgresql/data
-    ports:
-      - 5432:5432
-
   pgadmin:
     # Name of the container this service creates. Otherwise it's prefixed with the git repo name
     image: "dpage/pgadmin4:latest"

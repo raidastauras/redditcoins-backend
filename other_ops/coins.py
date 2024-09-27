@@ -187,6 +187,10 @@ def manual_coins():
             'name': ['GRAVITY'],
             'other': []
         },
+        'RLY': {
+            'name': ['RLY'],
+            'other': []
+        },
     }
 
 

@@ -25,7 +25,7 @@ def manual_coins():
         },
         'NANO': {
             'name': ['NANO'],
-            'other': ['Nano']
+            'other': ['Nano', 'XNO']
         },
         'XMR': {
             'name': ['XMR'],
@@ -196,5 +196,5 @@ def manual_coins():
 
 def get_coins() -> dict:
     # in case of duplicate key in dicts
-    # latest dict overwrites previous dicts
+    # later dict overwrites previous dicts
     return {**coinbase_coins(), **manual_coins()}

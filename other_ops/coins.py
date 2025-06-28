@@ -191,6 +191,10 @@ def manual_coins():
             'name': ['RLY'],
             'other': []
         },
+        'S': {
+            'name': ['SONIC'],
+            'other': []
+        },
     }
 
 

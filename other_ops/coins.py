@@ -7,7 +7,9 @@ def coinbase_coins():
     for coin in r.json():
         if coin['details']['type'] == 'crypto':
             coinbase_coins[coin['id']] = {
-                'name': [coin['id']],
+                # edge case for coin tokens that are a single letter because these
+                # are hard to count, lets not include the token name - id - at all.
+                'name': [coin['id']] if len(coin['id']) > 1 else [],
                 'other': [coin['name']]
             }
     return coinbase_coins
